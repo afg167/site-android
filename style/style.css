@@ -1,0 +1,219 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'Android';
+    src: url('../fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root {
+    --cor1: #c5ebd6;
+    --cor2: #83e1ad;
+    --cor3: #3ddc84;
+    --cor4: #2fa866;
+    --cor5: #1a5c37;
+    --cor6: #063d1e;
+
+    --font-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --font-destaque: 'Bebas Neue', 'cursive';
+    --font-android: 'Android', 'cursive';
+}
+
+*{ /*O ASTERISCO INDICA QUE ESSE SELETOR É PARA CONFIGURAÇÃO GLOBAL*/
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: var(--cor1);
+    font-family: var(--font-padrao);
+    height: 1000px;
+    margin: 0px;
+}
+header{
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor4), var(--cor5));
+    text-align: center;/*serve para todos os textos filhos desse seletor*/
+    width: auto;
+    padding-top: 20px;
+    box-shadow: 0px 3px 4px 4px rgba(110, 110, 110, 0.26);
+}
+header > h1{
+    color: rgb(240, 240, 240);
+    font-size: 35pt;
+    font-family: var(--font-destaque);
+    font-weight:normal;
+    font-size: 30pt;
+    padding-bottom: 20px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.699);
+}
+
+header > p{
+    max-width: 650px;
+    color: white;
+    font-family: Arial, Verdana, Helvetica, sans-serif;
+    font-size:larger;    
+    max-width: 500px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: auto;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.699);
+}
+nav{
+    /*background-color: var(--cor5);*/
+    padding: 10px;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.363);
+}
+nav#links{
+    font-size: large;
+    text-align: left;
+    margin-bottom: 0px;
+    padding:8px;
+}
+nav > a{
+    padding: 8px;
+    color:var(--cor1);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    /*transition:all 0.3s ease;*/
+    transition-duration: 0.5s;
+    opacity:1;
+}
+nav > a:hover{
+    width: auto;
+    background-color: var(--cor3);
+    border-radius: 3px;
+    color: var(--cor5);
+    opacity:0.5;
+}
+nav > a:visited{
+    color: purple
+}
+main{
+    width: auto;
+    min-width: 300px;
+    max-width: 1000px;    
+    background-color: white;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 20px 20px 40px 20px;
+    /*border-radius: 0px 0px 10px 10px; FUNFA DE BOAS*/
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+main h1{
+    font-family: var(--font-android);
+    color: var(--cor4);
+    font-size: 22pt;
+    font-weight: normal;
+    margin: 0px 0px 5px 10px;
+}
+main h2{
+    background-image: linear-gradient(to right, var(--cor1), transparent);
+    /*padding-left: 10px; FUNFA DE BOAS*/
+    text-indent: 8px;
+    font-size: 16pt;
+    font-family: var(--font-android);
+    color: var(--cor4);
+    font-weight: normal;
+    margin: 0px 0px 5px 10px;
+}
+main p{
+    font-family: var(--font-padrao), sans-serif;
+    text-align: justify;
+    text-indent: 2.5em;
+    line-height: 1em;
+    font-size: 13pt;
+    margin: 15px 10px 15px 10px;
+}
+main strong{    
+    color:var(--cor4);
+    font-weight: bold;    
+}
+main a{
+    background-color: var(--cor1);
+    color: var(--cor5);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 2px 6px;
+}
+main a:hover{
+    text-decoration: underline;
+    color: var(--cor3);
+}
+main a:visited{
+    color: purple
+}
+a.externo::after{
+    content: '\00A0\00A0\1F517';
+}
+main img{
+    width: 100%;
+}
+.robots2{
+    max-width: 350px;
+    display: block;
+    margin: auto;
+}
+/*section.video{ NÃO ROLOU, FICA COM BARRAS PRETAS LATERAIS OU VERTICAIS, NA EXECUÇÃO
+    background-color: #12422e;
+    width: 100%;
+    display: block;
+    margin-left: -20px;
+    padding: 20px;
+}
+section.video > iframe{
+    padding: 20px 10px 20px 40px;
+}*/
+section.video{
+    background-color: var(--cor5);
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 56.7%;
+    position: relative;
+}
+section.video > iframe{
+    background-color: var(--cor5);
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+aside {
+    border-radius: 10px;
+    background-color: var(--cor1);        
+    margin: 15px 20px 0px 20px;
+    padding-bottom: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.281);
+}
+aside h3{
+    background-color:var(--cor4);
+    color:white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    text-indent: 0em;
+    /*margin: 0px; FUNFA DE BOAS
+    padding: 5px 5px 5px 10px;*/
+    padding: 5px;
+    padding-left: 10px;
+    border-radius: 10px 10px 0px 0px;
+}
+aside > ul{
+    list-style-type: '\2714\00A0\00A0'; /*NÃO É COMPATÍVEL COM QUALQUER TIPO DE BROWSER*/
+    list-style-position: inside;
+    padding-left: 10px;
+    columns: 2;
+}
+/*ul li:before {  FUNFA DE BOAS
+    content: '✔';
+}*/
+footer{    
+    color: white;
+    background-color: var(--cor5);    
+    text-align: center;
+    font-weight: bolder;
+}
