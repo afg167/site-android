@@ -134,7 +134,9 @@ main strong{
     font-weight: bold;    
 }
 main a{
-    background-color: var(--cor1);
+    background-image: linear-gradient(to bottom, transparent, var(--cor1)
+    , transparent);
+    /*background-color: var(--cor1);*/
     color: var(--cor5);
     text-decoration: none;
     font-weight: bold;
@@ -149,6 +151,7 @@ main a:visited{
 }
 a.externo::after{
     content: '\00A0\00A0\1F517';
+    font-size: 10pt;
 }
 main img{
     width: 100%;
